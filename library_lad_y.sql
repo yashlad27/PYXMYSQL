@@ -1,0 +1,7 @@
+SHOW DATABASES;
+
+USE librarylady;
+
+SHOW TABLES;
+SELECT * FROM genre;
+SHOW PROCEDURE STATUS WHERE Db = 'librarylady';
