@@ -37,7 +37,7 @@ python library_db_app.py
 The program will prompt for:
 ```
 Enter MySQL username: root
-Enter MySQL password: ******
+Enter MySQL password: test123
 ```
 **Note:** Ensure you use the correct credentials for MySQL.
 
@@ -96,18 +96,4 @@ If books exist for the genre, they will be displayed in a **formatted table**:
   ```
   Invalid choice! Please enter 1 or 2.
   ```
-
 ---
-
-## Troubleshooting
-
-### **1️⃣ No Books Found for a Genre?**
-- Run in MySQL:
-  ```sql
-  CALL book_has_genre('Accounting');
-  ```
-  - If empty, check if `book_genre` has records:
-    ```sql
-    SELECT * FROM book_genre WHERE genre = 'Accounting';
-    ```
-  - If missing, ensure `book` and `book_genre` tables are correctly populated.
